@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: OVERLOOK website
+    url: https://violentpoo.github.io/overlook-website/
+    about: Learn about OVERLOOK and its current development status.
+  - name: Read before posting
+    url: https://violentpoo.github.io/overlook-website/feedback/
+    about: Review public feedback and sensitive-information guidance.

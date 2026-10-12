@@ -1,0 +1,61 @@
+name: Request a feature
+description: Suggest an improvement or a new idea for OVERLOOK.
+title: "[Feature]: "
+labels:
+  - enhancement
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing your idea. No technical knowledge is needed. Search existing requests first so related ideas can stay together.
+
+        This request is public. Do not include confidential or personal information.
+  - type: input
+    id: title
+    attributes:
+      label: Feature title
+      description: Give the idea a short, descriptive name.
+      placeholder: "Example: Reorder favorite applications"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Proposed feature
+      description: Describe what you would like OVERLOOK to do.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: What difficulty would this solve, or what need would it address?
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected behavior
+      description: How would you expect the feature to work from a user's perspective?
+    validations:
+      required: true
+  - type: textarea
+    id: usefulness
+    attributes:
+      label: Why it would be useful
+      description: Tell us who this would help and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples (optional)
+      description: Add any examples, sketches, or extra context that clarify the idea. Review uploads for private details.
+  - type: checkboxes
+    id: public
+    attributes:
+      label: Public information check
+      options:
+        - label: I understand that this request and any attachments will be publicly visible.
+          required: true
