@@ -1,45 +1,39 @@
-# OVERLOOK Website
+# OVERLOOK
 
-Official static website and public feedback portal for OVERLOOK, an Android TV entertainment discovery and launcher application.
+OVERLOOK is an entertainment discovery and launcher application designed for Android TV and Google TV. It brings supported entertainment sources into a streamlined, television-first interface built for comfortable viewing and remote-control navigation.
 
-This repository contains only public website files and GitHub Issue Forms. It is intentionally independent from the private Android application repository and does not contain application source code, build files, binaries, credentials, private service configuration, or internal development documentation.
+## Visit the Website
 
-## Local preview
+Learn more about OVERLOOK, explore authentic application screenshots, and follow its development at:
 
-The site uses GitHub Pages project-path URLs. Serve the parent `/workspace` directory so `/overlook-website/` resolves exactly as it will in production:
+**[violentpoo.github.io/overlook-website](https://violentpoo.github.io/overlook-website/)**
 
-```sh
-python3 -m http.server 8080 --directory /workspace
-```
+## What OVERLOOK Does
 
-Open `http://localhost:8080/overlook-website/`.
+OVERLOOK currently supports:
 
-## Structure
+- Searching configured Plex and Jellyfin libraries alongside supported Plex Discover information
+- Browsing live television and program information through HDHomeRun integration
+- Exploring sports schedules and supported viewing destinations
+- Opening supported streaming applications installed on the device
+- Accessing supported personal media libraries from a television-focused interface
 
-- `index.html`: landing page, features, setup flow, and availability
-- `feedback/`: public bug-report and feature-request portal
-- `about/`: product purpose and design principles
-- `contact/`: official identity, public contact, and Wikimedia identification guidance
-- `.github/ISSUE_TEMPLATE/`: GitHub YAML Issue Forms
-- `assets/`: local styles, scripts, original brand graphics, and reviewed public screenshots
+Availability depends on the services, applications, subscriptions, devices, and media sources configured by each user. OVERLOOK does not provide streaming subscriptions or host third-party content.
 
-Guide and Sports screenshots in `assets/images/screenshots/` are permanently
-blurred public derivatives. Their unblurred originals are not part of this
-repository. Home and Search are metadata-stripped, proportionally downscaled
-captures from the application.
+## Development Status
 
-## Publication checklist
+OVERLOOK is currently in development for Android TV and Google TV. A public release date has not been announced, and compatibility with every device is not guaranteed.
 
-Publication requires explicit owner approval. Before publishing:
+## Feedback
 
-1. Confirm the GitHub owner is `ViolentPoo` or update every canonical URL, repository URL, issue link, `robots.txt`, and `sitemap.xml`.
-2. Approve or replace the private operational contact language on the Contact page.
-3. Review all product statements for accuracy against the current application.
-4. Create a public repository named `overlook-website` with Issues enabled.
-5. Create the `bug`, `enhancement`, and `needs-triage` labels before accepting reports.
-6. Push only this repository's reviewed files and enable GitHub Pages from the `main` branch root.
-7. Verify the published pages, HTTPS, navigation, issue forms, and repository contents.
+Feedback is welcome through GitHub Issues:
 
-## Dependencies
+- [Report a bug](https://github.com/ViolentPoo/overlook-website/issues/new?template=bug_report.yml)
+- [Request a feature](https://github.com/ViolentPoo/overlook-website/issues/new?template=feature_request.yml)
+- [Browse existing issues](https://github.com/ViolentPoo/overlook-website/issues)
 
-None. The site is plain HTML, CSS, and JavaScript with no build step, analytics, tracking cookies, external fonts, or runtime asset requests.
+Please do not include passwords, access tokens, private server addresses, personal account information, or other confidential details in public issues.
+
+## About This Repository
+
+This repository contains the public OVERLOOK website and its GitHub Issue Forms. It does not contain the Android application source code.
