@@ -160,8 +160,6 @@ h3 { margin-bottom: 12px; font-size: 1.25rem; }
 .credit-heading { display: flex; margin-bottom: 25px; align-items: flex-start; justify-content: space-between; gap: 22px; }
 .credit-heading h3 { margin-bottom: 0; font-size: clamp(1.55rem, 3vw, 2.25rem); }
 .credit-kicker { margin-bottom: 6px; color: #777b91; font-size: .72rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
-.credit-status { flex: 0 0 auto; padding: 6px 10px; border: 1px solid rgba(131,113,255,.35); border-radius: 999px; background: rgba(131,113,255,.08); color: #cbc4ff; font-size: .7rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
-.credit-status-active { border-color: rgba(114,221,255,.35); background: rgba(114,221,255,.08); color: var(--blue); }
 .credit-details { display: grid; margin: 0; gap: 16px; }
 .credit-details div { padding-top: 16px; border-top: 1px solid var(--line); }
 .credit-details dt { color: #777b91; font-size: .7rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
@@ -213,8 +211,6 @@ h3 { margin-bottom: 12px; font-size: 1.25rem; }
   .statement, .cta { padding: 31px 24px; }
   .feedback-card { min-height: 350px; padding: 29px; }
   .credit-entry { padding: 26px; }
-  .credit-heading { display: grid; }
-  .credit-status { justify-self: start; }
   .footer-top, .footer-bottom { flex-direction: column; }
   .footer-links { gap: 14px 20px; }
 }
