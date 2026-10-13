@@ -1,0 +1,37 @@
+name: Test Streaming Service Deduplication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/**"
+      - ".github/ISSUE_TEMPLATE/streaming_service_request.yml"
+      - ".github/streaming-service-aliases.json"
+      - ".github/workflows/deduplicate-streaming-service-requests.yml"
+      - ".github/workflows/test-streaming-service-deduplication.yml"
+  pull_request:
+    paths:
+      - ".github/scripts/**"
+      - ".github/ISSUE_TEMPLATE/streaming_service_request.yml"
+      - ".github/streaming-service-aliases.json"
+      - ".github/workflows/deduplicate-streaming-service-requests.yml"
+      - ".github/workflows/test-streaming-service-deduplication.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 22
+      - name: Run deduplication tests
+        run: node --test .github/scripts/dedupe-streaming-service.test.js

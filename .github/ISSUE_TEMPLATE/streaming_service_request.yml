@@ -1,0 +1,53 @@
+name: Streaming Service Request
+description: Request support for a streaming application or service in OVERLOOK.
+title: "[Streaming Service]: "
+labels:
+  - streaming-service-request
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping identify streaming services people would like OVERLOOK to support. Search existing requests first; confirmed duplicate requests may be linked and consolidated automatically.
+
+        This request is public. Do not include account credentials, subscription details, personal viewing history, device identifiers, or sensitive personal information.
+  - type: input
+    id: service-name
+    attributes:
+      label: Streaming service name
+      description: Name the specific streaming service or Android TV application.
+      placeholder: "Example: A regional streaming platform, live TV service, or sports streaming application"
+    validations:
+      required: true
+  - type: input
+    id: service-link
+    attributes:
+      label: Service website or Google Play link
+      description: Optional but encouraged. This helps identify the correct provider and Android TV application.
+      placeholder: "https://..."
+  - type: checkboxes
+    id: capabilities
+    attributes:
+      label: What would you like OVERLOOK to support?
+      description: Select one or more capabilities.
+      options:
+        - label: Recognize and launch the installed application.
+        - label: Include available programming in the TV Guide.
+        - label: Include supported sports events.
+        - label: Include the service in unified Search.
+        - label: Open specific content directly when supported.
+        - label: Other.
+    validations:
+      required: true
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional information
+      description: Optional. Share relevant country or region details, platform limitations, or why this integration would be useful. Do not include private account or device information.
+  - type: checkboxes
+    id: public
+    attributes:
+      label: Public information check
+      options:
+        - label: I understand that this request and any attachments will be publicly visible.
+          required: true

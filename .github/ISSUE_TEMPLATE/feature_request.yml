@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for sharing your idea. No technical knowledge is needed. Search existing requests first so related ideas can stay together.
+        Thanks for sharing your idea. No technical knowledge is needed. Search existing requests first so related ideas can stay together. To request support for a streaming service, use the dedicated Streaming Service Request form instead.
 
         This request is public. Do not include confidential or personal information.
   - type: input

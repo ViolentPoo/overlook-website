@@ -30,6 +30,7 @@ Feedback is welcome through GitHub Issues:
 
 - [Report a bug](https://github.com/ViolentPoo/overlook-website/issues/new?template=bug_report.yml)
 - [Request a feature](https://github.com/ViolentPoo/overlook-website/issues/new?template=feature_request.yml)
+- [Request a streaming service](https://github.com/ViolentPoo/overlook-website/issues/new?template=streaming_service_request.yml)
 - [Browse existing issues](https://github.com/ViolentPoo/overlook-website/issues)
 
 Please do not include passwords, access tokens, private server addresses, personal account information, or other confidential details in public issues.

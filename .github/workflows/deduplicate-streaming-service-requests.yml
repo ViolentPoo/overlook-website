@@ -1,0 +1,41 @@
+name: Deduplicate Streaming Service Requests
+
+on:
+  issues:
+    types: [opened]
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: Issue number to reprocess after a manual correction
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: streaming-service-request-deduplication
+  queue: max
+  cancel-in-progress: false
+
+jobs:
+  deduplicate:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
+      contains(github.event.issue.labels.*.name, 'streaming-service-request')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out trusted automation
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Consolidate verified duplicate requests
+        run: node .github/scripts/dedupe-streaming-service.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
